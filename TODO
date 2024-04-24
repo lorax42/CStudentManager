@@ -1,1 +1,15 @@
-everything
+# TODO
+## TODO
+- implement print student information
+- implement parser and assign to student attributes
+- implement write students to file
+
+- implement group generator
+    - see group generator (cpp project on github)
+- implement attendance management
+- implement grade management
+
+## DONE
+- read students file
+- rough structure
+

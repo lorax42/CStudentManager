@@ -28,8 +28,8 @@
 
 #include "student.h"
 
-#include "readFile.h"
-#include "writeFile.h"
+#include "readStudents.h"
+#include "writeStudents.h"
 #include "printList.h"
 
 #define LEN(arr) sizeof(arr)/sizeof(arr[0])
@@ -78,7 +78,19 @@ int main(){
         "\0"
     };
 
-    struct Student students[];
+    Students students;
+    students.list=(Student*) malloc(sizeof(Student));
+    students.len=1;
+
+    // TEST STUDENT
+    ///*
+    strcat(students.list[0].last_name,"Doe");
+    strcat(students.list[0].first_name,"John");
+    students.list[0].sex='m';
+    students.list[0].age=17;
+    strcat(students.list[0].email,"doe.john@lernsax.de");
+    strcat(students.list[0].phone,"1234 5678910");
+    //*/
 
     // STARTUP
     printf("%s",logo);
@@ -95,14 +107,15 @@ int main(){
 
             case 1:
                 printf("Printing...\n");
+                printList(students);
                 break;
 
             case 2:
-                printf("Reading...\n");
+                readStudents(students);
                 break;
 
             case 3:
-                printf("Writing...\n");
+                writeStudents(students);
                 break;
 
             default:
@@ -111,6 +124,8 @@ int main(){
     }
 
     // CLEANUP
+    free(students.list);
+
     printf("%s",logo);
     return(0);
 }

@@ -1,1 +1,1 @@
-void printList(struct Student students[]);
+void printList(Students students);

@@ -3,10 +3,9 @@
 
 #include "student.h"
 
-void printList(struct Student students[]){
-    int i=0;
-    while(strcmp(students[i].last_name,"\0")!=0){
-        printf("%s,%s,%d\n",students[i].last_name,students[i].first_name,students[i].age);
+void printList(Students students){
+    for(size_t i=0;i<students.len;i++){
+        printf("%s,%s,%d\n",students.list[i].last_name,students.list[i].first_name,students.list[i].age);
     }
 }
 
