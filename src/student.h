@@ -12,3 +12,5 @@ typedef struct{
     size_t len;
 } Students;
 
+int addStudent(Students* students); // adds 1 student to students.list and increases students.len
+

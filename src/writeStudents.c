@@ -22,10 +22,10 @@ void writeFile(char* text){
 }
 
 void writeStudents(Students students){
-    char* text=(char*) malloc(students.len*(sizeof(Student)+6)); // allocate memory for size of students.list +
-                                                        //__^______ commas (for separating attributes)
     char buffer[50];
 
+    char* text=(char*) malloc(students.len*(sizeof(Student)+10)); // allocate memory for size of students.list +
+                                                        //__^______ commas (for separating attributes)
     for(size_t i=0;i<=students.len;i++){
         // append last_name to student from students.list
         strcat(text,students.list[i].last_name);

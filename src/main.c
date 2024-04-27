@@ -83,14 +83,14 @@ int main(){
     students.len=1;
 
     // TEST STUDENT
-    ///*
+    /*
     strcat(students.list[0].last_name,"Doe");
     strcat(students.list[0].first_name,"John");
     students.list[0].sex='m';
     students.list[0].age=17;
     strcat(students.list[0].email,"doe.john@lernsax.de");
     strcat(students.list[0].phone,"1234 5678910");
-    //*/
+    */
 
     // STARTUP
     printf("%s",logo);
