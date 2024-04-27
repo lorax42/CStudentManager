@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/CStudentManager.dir/src/main.c.o -o CStudentManager 

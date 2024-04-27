@@ -1,3 +1,0 @@
-/home/lloyd/projects/code/c/CStudentManager/build/CMakeFiles/CStudentManager.dir
-/home/lloyd/projects/code/c/CStudentManager/build/CMakeFiles/edit_cache.dir
-/home/lloyd/projects/code/c/CStudentManager/build/CMakeFiles/rebuild_cache.dir
