@@ -14,7 +14,15 @@
  * ├build
  * │└cmake_stuff
  * ├src
- * │└main.c
+ * │├main.c
+ * │├printList.c
+ * │├printList.h
+ * │├readStudents.c
+ * │├readStudents.h
+ * │├student.c
+ * │├student.h
+ * │├writeStudents.c
+ * │└writeStudents.h
  * ├CMakeLists.txt
  * ├LICENSE
  * ├README.md
