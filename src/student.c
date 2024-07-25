@@ -16,6 +16,7 @@ int addStudent(Students* students){
     }
     else{
         printf("ALERT: %s:%d: Memory reallocation succeeded\n",__FILE__,__LINE__);
+        printf("ALERT: students.len=%lu\n",students->len);
 
         for(size_t i=0;i<temp->len;i++){
             students->list[i]=temp->list[i];
