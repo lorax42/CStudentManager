@@ -24,8 +24,11 @@ void writeFile(char* text){
 void writeStudents(Students students){
     char buffer[50];
 
-    char* text=(char*) malloc(students.len*(sizeof(Student)+10)); // allocate memory for size of students.list +
+    //char* text=(char*) malloc(students.len*(sizeof(Student)+10)); // allocate memory for size of students.list +
                                                         //__^______ commas (for separating attributes)
+
+    char* text=(char*) malloc(sizeof(students)+sizeof(char) * 10); // allocate memory for size of students.list + seperators
+
     for(size_t i=0;i<=students.len;i++){
         // append last_name to student from students.list
         strcat(text,students.list[i].last_name);
@@ -40,7 +43,7 @@ void writeStudents(Students students){
         strcat(text,",");
 
         // append age to student from students.list
-        sprintf(buffer,"%d",students.list[i].age);
+        sprintf(buffer,"%lu",students.list[i].age);
         strcat(text,buffer);
         strcat(text,",");
 

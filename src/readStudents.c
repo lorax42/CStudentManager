@@ -27,17 +27,21 @@ void readStudents(Students students){
     // PARSE text
     rewind(file); // sets file stream back to beginning of file
     size_t i=0;
+    
+    // read student attributes from file
     //while(fscanf(file,"%s,%s,%c,%d,%s,%s\n",students.list[i].last_name,
-    while(fscanf(file,"%[^,],%[^,],%c,%d,%[^,],%s\n",students.list[i].last_name,
-                                            students.list[i].first_name,
-                                            &students.list[i].sex,
-                                            &students.list[i].age,
-                                            students.list[i].email,
-                                            students.list[i].phone)==6){
-        // EDIT
+    while(fscanf(file,"%[^,],%[^,],%c,%ld,%[^,],%s\n",students.list[i].last_name,
+                                                     students.list[i].first_name,
+                                                     &students.list[i].sex,
+                                                     &students.list[i].age,
+                                                     students.list[i].email,
+                                                     students.list[i].phone
+                )==6){
+
         int x=addStudent(&students);
         if(x!=0){
             ERROR("trouble adding student");
+            exit(1);
         }
 
         i++;
@@ -46,11 +50,11 @@ void readStudents(Students students){
     fclose(file); // close file
 
     ///*
-    for(int i=0;i<students.len;i++){
+    for(size_t i=0;i<students.len;i++){
         printf(" last_name: %s\n",students.list[i].last_name);
         printf("first_name: %s\n",students.list[i].first_name);
         printf("       sex: %c\n",students.list[i].sex);
-        printf("       age: %d\n",students.list[i].age);
+        printf("       age: %ld\n",students.list[i].age);
         printf("     email: %s\n",students.list[i].email);
         printf("     phone: %s\n\n",students.list[i].phone);
     }
