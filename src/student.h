@@ -2,7 +2,8 @@ typedef struct{
     char last_name[50];
     char first_name[50];
     char sex; // f,m,d
-    int age;
+    //int age;
+    size_t age;
     char email[50];
     char phone[50];
 } Student;
